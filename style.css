@@ -1,0 +1,72 @@
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Raleway', sans-serif; */
+
+p, h1, h2, h3 {
+  margin: 0px;
+}
+
+body {
+  margin: 64px;
+  background-color: #fafafa;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+#restaurants {
+  margin-top: 64px;
+}
+
+.card-main {
+  width: 100%;
+  /* border: 1px dashed hotpink; */
+  margin-bottom: 40px;
+}
+
+.card-image {
+  /* border: 1px dashed goldenrod; */
+  height: 120px;
+  overflow: hidden;
+  /* width: 100%;
+  object-fit: cover; */
+}
+
+.card-image img {
+  width: 120%;
+  height: 120%;
+}
+
+.card-info {
+  /* border: 1px dashed yellowgreen; */
+  padding-top: 8px;
+  padding-bottom: 12px;
+}
+
+.card-additional-info {
+  /* border: 1px dashed salmon; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+}
+
+
+
+.info-small-box {
+  color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 4px;
+  margin-right: 8px;
+  height: 27px;
+}
+.info-small-box p {
+  margin: 0;
+
+}
+
+h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 19px;
+  margin-bottom: 4px;
+}
