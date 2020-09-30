@@ -55,15 +55,15 @@ const fetchRestaurants = () => {
           </div>
             
             `
-       
+
       });
   })
 }
 
 const checkIfImageExists = featuredImage => {
   console.log(featuredImage);
-  //Maks help: if (!!featuredImage) {
-  if (featuredImage === "") {
+  
+  if (!featuredImage) {
     return `./assets/image_kebab.png`;
   } else {
     return featuredImage;
@@ -73,3 +73,4 @@ const checkIfImageExists = featuredImage => {
 
 
 fetchRestaurants();
+
