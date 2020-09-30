@@ -33,7 +33,7 @@ const fetchRestaurants = (url) => {
             mainCardArea.innerHTML += `
             
             <div class="card-main" id="cardMain">
-            <a href="${rest.restaurant.menu_url}" target="_blank"><div class="card-image" id="cardImage"><img src="${checkIfImageExists(rest.restaurant.featured_image)}"/></div>
+            <a href="${rest.restaurant.menu_url}" class="link-container" target="_blank"><div class="card-image" id="cardImage"><img src="${checkIfImageExists(rest.restaurant.featured_image)}"/></div>
             <div class="card-info" id="cardInfo">
             <h3>${rest.restaurant.name}</h3>
             <p>${rest.restaurant.location.address}</p>

@@ -87,6 +87,7 @@ section {
 .chevron {
   font-size: 20px;
   line-height: 1px;
+  display: none;
 }
 
 .card-main {
@@ -128,6 +129,10 @@ section {
   flex-direction: row;
 
   /* justify-content: space-evenly; */
+}
+
+.link-container {
+  flex-grow: 1; 
 }
 
 .displaying-amount {
@@ -212,4 +217,11 @@ a:hover {
     grid-gap: 1rem;
   }
   
+}
+
+@media (min-width: 390px ) {
+
+  .chevron {
+    display: contents;
+  }
 }
