@@ -1,22 +1,29 @@
 /* font-family: 'Roboto', sans-serif; */
 /* font-family: 'Raleway', sans-serif; */
 
-p, h1, h2, h3 {
+p,
+h1,
+h2,
+h3 {
   margin: 0px;
 }
 
 body {
   margin: 0px;
-  background-color: #fafafa;
-  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 header {
   width: 100%;
   height: 56px;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -26,7 +33,7 @@ header {
 }
 
 header img {
-  width: 200px;
+  width: 250px;
 }
 
 #restaurants {
@@ -34,12 +41,52 @@ header img {
 }
 
 section {
+  max-width: 1440px;
   margin: 40px;
-  margin-top: 100px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.sort-box {
+  /* border: 1px dashed salmon; */
+  margin-top: 72px;
+  /* max-width: 1225px;
+  width: 100%; */
+  margin-right: 40px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sort-box p {
+  margin-right: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(0,0,0,0.5);
+}
+
+.sort-button {
+  padding: 8px 16px 8px 16px;
+  background-color: rgba(0,0,0,0.07);
+  border-radius: 100px;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  border: none;
+  margin-right: 8px;
+}
+
+.sort-button:hover {
+  background-color: rgba(0,0,0,0.02);
+  cursor: pointer;
+}
+
+.chevron {
+  font-size: 20px;
+  line-height: 1px;
 }
 
 .card-main {
@@ -48,10 +95,9 @@ section {
   /* border: 1px dashed hotpink; */
   margin-bottom: 40px;
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
-  background-color: white; 
-  padding-bottom: 8px;
+  background-color: white;
+  padding-bottom: 16px;
   max-width: 295px;
-
   display: flex;
   flex-direction: column;
 }
@@ -80,11 +126,15 @@ section {
   /* border: 1px dashed salmon; */
   display: flex;
   flex-direction: row;
-  
+
   /* justify-content: space-evenly; */
 }
 
-
+.displaying-amount {
+  color: rgba(0,0,0,0.4);
+  text-align: center;
+  margin-bottom: 40px;
+}
 
 .info-small-box {
   color: rgba(0, 0, 0, 0.65);
@@ -93,9 +143,9 @@ section {
   margin-right: 8px;
   height: 27px;
 }
+
 .info-small-box p {
   margin: 0;
-
 }
 
 h3 {
@@ -108,29 +158,58 @@ h3 {
 
 footer {
   width: 100%;
-  height: 56px;
+  height: 300px;
   background-color: black;
   color: white;
+  padding: 72px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+footer * {
+  margin-bottom: 8px;
+}
 
+footer .img-github {
+  margin-bottom: 0;
+  margin-right: 8px;
+}
+
+.p-webmasters {
+  margin-left: 8px;
+}
+
+.footer-logo {
+  width: 230px;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+a:hover {
+  color: #5FB709;
+  opacity: 0.85;
+
+}
 
 @media (min-width: 667px) and (max-width: 1024px) {
-  
   section {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
   }
-
+  
 }
 
 @media (min-width: 1025px) {
-  
   section {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
   }
-
+  
 }

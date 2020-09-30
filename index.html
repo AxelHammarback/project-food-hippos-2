@@ -16,11 +16,29 @@
     />
   </head>
   <body>
-    <header><img src="./assets/logo-hhh.png" /></header>
+    <header>
+      <img src="./assets/logo-hhh.png" />
+    </header>
+
+    <div class="sort-box">
+      <p>Sort by: </p>
+      <button class="sort-button" onclick="fetchRestaurants(sortCostURL)">Rating</button>
+      <button class="sort-button" onclick="fetchRestaurants(sortRatingURL)"><span class="chevron">&#8964;</span> Cost</button>
+      <button class="sort-button" onclick="fetchRestaurants(defaultURL)">Reset</button>
+    </div>
 
     <section id="mainCardArea"></section>
 
-    <footer>Axel Claudia Nathalie</footer>
+    <p class="displaying-amount">Displaying 20 out of 91</p>
+
+    <footer>
+      <img class="footer-logo" src="./assets/logo-hhh-white.png" alt="Hungry Hungry Hippos White Logo">
+      <p>Webmasters:</p>
+      <a class="p-webmasters" href="https://github.com/AxelHammarback/" target="_blank"><img class="img-github" src="./assets/github-logo.svg">Axel</a>
+      <a class="p-webmasters" href="https://github.com/ckjerrgren" target="_blank"><img class="img-github" src="./assets/github-logo.svg">Claudia</a>
+      <a class="p-webmasters" href="https://github.com/nathalienordstrom" target="_blank"><img class="img-github" src="./assets/github-logo.svg">Nathalie</a>
+
+    </footer>
 
     <script src="script.js"></script>
   </body>
