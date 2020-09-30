@@ -8,8 +8,15 @@ h3 {
   margin: 0px;
 }
 
+html {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   margin: 0px;
+  padding: 0px;
   background-color: #fff;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -18,6 +25,7 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  min-height: 100%;
 }
 
 header {
@@ -30,6 +38,7 @@ header {
   top: 0;
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
   background-color: white;
+  z-index: 1;
 }
 
 header img {
@@ -40,19 +49,22 @@ header img {
   margin-top: 64px;
 }
 
-section {
+.main-card-area {
   max-width: 1440px;
-  margin: 40px;
-  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .sort-box {
   /* border: 1px dashed salmon; */
-  margin-top: 72px;
+  margin-top: 88px;
   /* max-width: 1225px;
   width: 100%; */
   margin-right: 40px;
@@ -80,7 +92,7 @@ section {
 }
 
 .sort-button:hover {
-  background-color: rgba(0,0,0,0.02);
+  background-color: rgba(0,0,0,0.05);
   cursor: pointer;
 }
 
@@ -104,16 +116,20 @@ section {
 }
 
 .card-image {
-  /* border: 1px dashed goldenrod; */
-  height: 120px;
-  overflow: hidden;
-  /* width: 100%;
-  object-fit: cover; */
+  height: 140px;
+  position:relative;
+  z-index: 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden
 }
 
 .card-image img {
-  width: 120%;
-  height: 120%;
+  flex-shrink:0;
+  min-width:100%;
+  min-height:100%;
+  width: 100%;
 }
 
 .card-info {
@@ -123,11 +139,15 @@ section {
   flex-grow: 1;
 }
 
+.card-info p {
+  font-size: 14px;
+  color: rgba(0,0,0,0.75);
+}
+
 .card-additional-info {
   /* border: 1px dashed salmon; */
   display: flex;
   flex-direction: row;
-
   /* justify-content: space-evenly; */
 }
 
@@ -138,15 +158,16 @@ section {
 .displaying-amount {
   color: rgba(0,0,0,0.4);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .info-small-box {
   color: rgba(0, 0, 0, 0.65);
   background-color: rgba(0, 0, 0, 0.05);
-  padding: 4px;
+  padding: 0px 6px;
   margin-right: 8px;
   height: 27px;
+  font-size: 14px;
 }
 
 .info-small-box p {
@@ -182,8 +203,13 @@ footer .img-github {
   margin-right: 8px;
 }
 
+footer p {
+  opacity: 0.7;
+}
+
 .p-webmasters {
   margin-left: 8px;
+  opacity: 1;
 }
 
 .footer-logo {
@@ -191,8 +217,8 @@ footer .img-github {
 }
 
 a {
-  color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
+  color: inherit;
 }
 
 a:hover {
@@ -201,8 +227,28 @@ a:hover {
 
 }
 
+.loading-spinner {
+	pointer-events: none;
+	width: 2.5em;
+	height: 2.5em;
+	border: 0.4em solid transparent;
+	border-color: #eee;
+	border-top-color: #5FB709;
+	border-radius: 50%;
+  animation: loadingspin 0.8s linear infinite;
+  margin: 0 auto;
+  margin-top: 64px;
+}
+
+@keyframes loadingspin {
+	100% {
+			transform: rotate(360deg)
+	}
+}
+
+
 @media (min-width: 667px) and (max-width: 1024px) {
-  section {
+  .main-card-area {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
@@ -211,7 +257,7 @@ a:hover {
 }
 
 @media (min-width: 1025px) {
-  section {
+  .main-card-area {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;

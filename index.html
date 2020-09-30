@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -19,6 +18,7 @@
   <body>
     <header>
       <img src="./assets/logo-hhh.png" />
+      
     </header>
 
     <div class="sort-box">
@@ -27,17 +27,22 @@
       <button class="sort-button" onclick="fetchRestaurants(sortRatingURL)"><span class="chevron">&#8964;</span> Cost</button>
       <button class="sort-button" onclick="fetchRestaurants(defaultURL)">Reset</button>
     </div>
+    <div class="spinner-container" id="spinnerContainer">
+      <div class="loading-spinner"></div>
+    </div>
 
-    <section id="mainCardArea"></section>
-
-    <p class="displaying-amount">Displaying 20 out of 91</p>
+    <section id="mainCardArea" class="main-card-area">
+      
+    </section>
+    
+    <p class="displaying-amount" id="amountOfCards"></p>
 
     <footer>
       <img class="footer-logo" src="./assets/logo-hhh-white.png" alt="Hungry Hungry Hippos White Logo">
       <p>Webmasters:</p>
-      <a class="p-webmasters" href="https://github.com/AxelHammarback/" target="_blank"><img class="img-github" src="./assets/github-logo.svg">Axel</a>
-      <a class="p-webmasters" href="https://github.com/ckjerrgren" target="_blank"><img class="img-github" src="./assets/github-logo.svg">Claudia</a>
-      <a class="p-webmasters" href="https://github.com/nathalienordstrom" target="_blank"><img class="img-github" src="./assets/github-logo.svg">Nathalie</a>
+      <a class="p-webmasters" href="https://github.com/AxelHammarback/" target="_blank"><img class="img-github" src="./assets/github-logo.svg">Axel Hammarbäck</a>
+      <a class="p-webmasters" href="https://github.com/ckjerrgren" target="_blank"><img class="img-github" src="./assets/github-logo.svg">Claudia Kjerrgren</a>
+      <a class="p-webmasters" href="https://github.com/nathalienordstrom" target="_blank"><img class="img-github" src="./assets/github-logo.svg">Nathalie Nordström</a>
 
     </footer>
 
